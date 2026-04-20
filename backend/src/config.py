@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     # OpenAI
     openai_api_key: str = ""
     openai_model: str = "gpt-4o-mini"
-    openai_base_url: str = "https://api.gptsapi.net/v1"
+    openai_base_url: str = "openai_url"
     openai_temperature: float = 0.7
     openai_enabled: bool = True
     
