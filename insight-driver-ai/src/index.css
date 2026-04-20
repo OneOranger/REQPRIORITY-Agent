@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 25% 93%;
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 215 25% 93%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Priority colors */
+    --priority-p0: 0 84% 60%;
+    --priority-p1: 25 95% 53%;
+    --priority-p2: 45 93% 47%;
+    --priority-p3: 215 16% 70%;
+
+    /* Score colors */
+    --score-high: 142 71% 45%;
+    --score-medium: 45 93% 47%;
+    --score-low: 0 84% 60%;
+
+    /* Risk colors */
+    --risk-high: 0 84% 60%;
+    --risk-medium: 25 95% 53%;
+    --risk-low: 142 71% 45%;
+
+    /* Graph node colors */
+    --node-p0: 0 84% 60%;
+    --node-p1: 25 95% 53%;
+    --node-p2: 45 93% 47%;
+    --node-deferred: 215 16% 70%;
+
+    /* Edge colors */
+    --edge-dependency: 220 20% 30%;
+    --edge-weak: 215 16% 70%;
+    --edge-conflict: 0 84% 60%;
+    --edge-complement: 217 91% 60%;
+    --edge-same-goal: 142 71% 45%;
+
+    /* AI accent */
+    --ai-gradient-from: 217 91% 60%;
+    --ai-gradient-to: 262 83% 58%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 30%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 95%;
+    --sidebar-accent-foreground: 220 20% 10%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 60%;
+
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+  .font-body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+  .ai-gradient {
+    background: linear-gradient(135deg, hsl(var(--ai-gradient-from)), hsl(var(--ai-gradient-to)));
+  }
+  .ai-gradient-text {
+    background: linear-gradient(135deg, hsl(var(--ai-gradient-from)), hsl(var(--ai-gradient-to)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .priority-p0 { color: hsl(var(--priority-p0)); }
+  .priority-p1 { color: hsl(var(--priority-p1)); }
+  .priority-p2 { color: hsl(var(--priority-p2)); }
+  .priority-p3 { color: hsl(var(--priority-p3)); }
+  .bg-priority-p0 { background-color: hsl(var(--priority-p0)); }
+  .bg-priority-p1 { background-color: hsl(var(--priority-p1)); }
+  .bg-priority-p2 { background-color: hsl(var(--priority-p2)); }
+  .bg-priority-p3 { background-color: hsl(var(--priority-p3)); }
+}
