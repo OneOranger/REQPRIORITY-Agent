@@ -488,7 +488,7 @@ server {
 # 生产环境配置
 OPENAI_API_KEY=your_production_key
 OPENAI_MODEL=gpt-4o
-OPENAI_BASE_URL=https://api.openai.com/v1
+OPENAI_BASE_URL=openai_url
 OPENAI_ENABLED=true
 
 LANGSMITH_TRACING=true
