@@ -197,7 +197,7 @@ cp .env.example .env
 # OpenAI配置
 OPENAI_API_KEY=your_api_key_here
 OPENAI_MODEL=gpt-4o-mini
-OPENAI_BASE_URL=https://api.gptsapi.net/v1
+OPENAI_BASE_URL=openai_url
 OPENAI_TEMPERATURE=0.7
 OPENAI_ENABLED=true
 
